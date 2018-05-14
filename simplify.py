@@ -61,10 +61,16 @@ FilterScript = 'SimplificationFilter.mlx'  # script file
 original_mesh = str(sys.argv[1])  # input file
 simplified_mesh = str(sys.argv[2])  # output file
 Num_Of_Faces = int(sys.argv[3])  # Final Number of Faces
-TexturesFlag = bool(sys.argv[4])  # Final Number of Faces
+
+if(sys.argv[4].lower() == 'false' or sys.argv[4] == '0'):
+            TexturesFlag = False 	# Texture Flag
+elif(sys.argv[4].lower() == 'true' or sys.argv[4] == '1'):
+	TexturesFlag = True	# Texture Flag
+
+print ('TexturesFlag:', TexturesFlag)
 
 #Do the models have textures?
-TexturesFlag=True
+#TexturesFlag=True
 
 simplified_meshScript = mlx.FilterScript(file_in=original_mesh, file_out=simplified_mesh,
                                          ml_version='2016.12')  # Create FilterScript object
