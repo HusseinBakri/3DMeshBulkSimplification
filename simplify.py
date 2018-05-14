@@ -6,17 +6,17 @@ import meshlabxml as mlx
 import platform
 
 '''
-Description: A Python tool that simplify or decimate a 3D Model/Mesh (textured or not) into a lower resolution model
+Description: A Python tool that simplify or decimate a 3D Model/Mesh (textured or not) into a lower resolution model.
 Requirements: Installing Meshlab on the OS + Python3 Package called meshlabxml
             sudo pip3 install meshlabxml 
-Usage: python3 simplify.py Original_Mesh_NameOrPath Output_Mesh_NameOrPath Number_Of_Faces TexturesPresentFlag
-Original_Mesh_NameOrPath: Name.Extension if Python script is in the path of 3D models, Use Path otherwise
-Output_Mesh_NameOrPath: Name.Extension if Python script is in the path of 3D models, Use Path otherwise
-Number_Of_Faces: The final number of decimation you want to achieve
+Usage: python3 simplify.py Original_Mesh_NameOrPath Output_Mesh_NameOrPath Number_Of_Faces TexturesPresentFlag.
+Original_Mesh_NameOrPath: Name.Extension if Python script is in the path of 3D models, Use Path otherwise.
+Output_Mesh_NameOrPath: Name.Extension if Python script is in the path of 3D models, Use Path otherwise.
+Number_Of_Faces: The final number of faces you want to achieve.
 TexturesPresentFlag: True or False. If 3D mesh is tectured you have to use True.
 
-Supported Meshes Types are the ones supported by Meshlab (.obj, ply etc...)
-Meshlab unfortunately till now, does not support .gltf files yet. This might change in the future
+Supported Meshes Types are the ones supported normally by Meshlab (.obj, ply etc...).
+Meshlab unfortunately till now, does not support .gltf files yet. This might change in the future.
 
 Example: python3 simplify.py Hat.obj Hat_Simplified.obj 150000 True
 '''
