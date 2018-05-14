@@ -23,7 +23,7 @@ Example: python3 simplify.py Hat.obj Hat_Simplified.obj 150000 True
 
 
 # Location of Meshlab server (meshlabserver.exe) is normally in Windows 64 Bit installation inside: C:\Program Files\VCG\MeshLab\
-# Location of Meshlab server is normally in Mac OS inside: C:\Program Files\VCG\MeshLab
+# Location of Meshlab server is normally in Mac OS inside: /Applications/meshlab.app/Contents/MacOS/meshlabserver
 # Location of Meshlab server in a Linux system Ex Fedora 27 in
 # Otherwise Please change accordingly
 
