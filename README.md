@@ -1,5 +1,5 @@
 # Description
-A Python tool to simplify or decimate a 3D Model/Mesh  (With and Without Textures) into a lower resolution mesh taking a specific Number of Faces using the MeshlabXML Library
+A Meshlab(http://www.meshlab.net/) Python 3 tool to simplify or decimate a 3D Model/Mesh  (With and Without Textures) into a lower resolution mesh taking a specific Number of Faces using the MeshlabXML Library (https://github.com/3DLIRIOUS/MeshLabXML).
 
 # Requirements
 Installing Meshlab on the OS + Python3 Package called meshlabxml by 'sudo pip3 install meshlabxml'
