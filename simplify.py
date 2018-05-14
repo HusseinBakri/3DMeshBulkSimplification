@@ -24,7 +24,7 @@ Example: python3 simplify.py Hat.obj Hat_Simplified.obj 150000 True
 
 # Location of Meshlab server (meshlabserver.exe) is normally in Windows 64 Bit installation inside: C:\Program Files\VCG\MeshLab\
 # Location of Meshlab server is normally in Mac OS inside: /Applications/meshlab.app/Contents/MacOS/meshlabserver
-# Location of Meshlab server in a Linux system Ex Fedora 27 in
+# Location of Meshlab server in a Linux system Ex Fedora 27 in /usr/bin/meshlabserver (install Meshlab in Fedora 27 as 'sudo dnf install meshlab')
 # Otherwise Please change accordingly
 
 THIS_SCRIPTPATH = os.path.dirname(os.path.realpath(inspect.getsourcefile(lambda: 0)))
@@ -39,7 +39,7 @@ if(platform.system()=='Windows'):
 
 elif(platform.system()=='Linux'):
     print('\n You appear to be on Linux machine ...')
-    meshlabserver_path = ''
+    meshlabserver_path = '/usr/bin/meshlabserver'
 
 elif(platform.system()=='Darwin'):
     #We are on a Mac OS
