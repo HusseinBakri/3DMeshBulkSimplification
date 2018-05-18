@@ -34,13 +34,13 @@ The problem you might encounter happens when you want to use Meshlab Server on a
 You might get the following error: Problem: meshlabserver: cannot connect to X server
 
 That problem caused me a lot of headache when I was using this solution to bulk decimate models on Ubuntu Server 16.04. First you need to install xserver (solution below - similar technique for other Linux distros):
-
+```
 sudo apt-get install xserver-xorg xserver-xorg-core x11-apps x11-xserver-utils
 Xvfb :99 &
 export DISPLAY=:99
 
 xvfb-run python3 simplify.py Hat.obj Hat_Simplified.obj 150000 True
-
+```
 # Nope Hussein! did not Work! give me other solutions Please
 1) change the source code of Meshlab itself. Search for QApplication and put QCoreApplication instead of QApplication
 see this for more info: https://sourceforge.net/p/meshlab/discussion/499532/thread/6c3eebe2/
