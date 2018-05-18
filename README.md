@@ -1,5 +1,5 @@
 # Description
-A Meshlab(http://www.meshlab.net/) Python 3 tool to simplify or decimate a 3D Model/Mesh  (With and Without Textures) into a lower resolution mesh taking a specific Number of Faces using the MeshlabXML Library (https://github.com/3DLIRIOUS/MeshLabXML).
+A Meshlab (http://www.meshlab.net/) Python 3 tool to simplify or decimate a 3D Model/Mesh  (With and Without Textures) into a lower resolution mesh taking a specific Number of Faces using the MeshlabXML Library (https://github.com/3DLIRIOUS/MeshLabXML).
 
 The Python tool take a CLI arguments the original mesh, Decimated mesh, Decimated Mesh Number of Faces and Whether the 3D model is textured or not.
 
@@ -28,12 +28,12 @@ python3 simplify.py Hat.obj Hat_Simplified.obj 150000 True
 
 
 # Annoying Problem of cannot connect to X server in headless Linux server
-Now this tools is tested on Mac OS High Sierra, Linux Fedora and MS Windows 10. Works fine. Please contact me if you find bugs.
-The problem is if you want to use Meshlab Server on a Linux Headless (meaning no GUI no X Server).
+Now this tools is tested on Mac OS High Sierra, Linux Fedora 27 and MS Windows 10. Works fine. Please contact me if you find bugs.
+The problem you might encounter happens when you want to use Meshlab Server on a Linux/Unix Headless (meaning no GUI no X Server).
 
 You might get the following error: Problem: meshlabserver: cannot connect to X server
 
-That problem cause me  a headache when I was using this solution to bulk decimate models on Ubuntu Server 16.04. First you need to install xserver (solution below - similar technique for other Linux distros):
+That problem caused me a lot of headache when I was using this solution to bulk decimate models on Ubuntu Server 16.04. First you need to install xserver (solution below - similar technique for other Linux distros):
 
 sudo apt-get install xserver-xorg xserver-xorg-core x11-apps x11-xserver-utils
 Xvfb :99 &
@@ -41,10 +41,10 @@ export DISPLAY=:99
 
 xvfb-run python3 simplify.py Hat.obj Hat_Simplified.obj 150000 True
 
-# Nope Hussein! give me other solutions Please
-1) change the source code of Meshlab. Look QApplication and put QCoreApplication instead of QApplication
-see this: https://sourceforge.net/p/meshlab/discussion/499532/thread/6c3eebe2/
-2) I created another Python Tool that do the decimation with impressive results useing Blender Python API. It works as a complete headless solution like a charm. Have a look at 
+# Nope Hussein! did not Work! give me other solutions Please
+1) change the source code of Meshlab itself. Search for QApplication and put QCoreApplication instead of QApplication
+see this for more info: https://sourceforge.net/p/meshlab/discussion/499532/thread/6c3eebe2/
+2) Better: I created another Python Tool that do the decimation with impressive results using Blender Python API. It works as a complete headless solution like a charm! Have a look at 
 
 
 
