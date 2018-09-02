@@ -4,6 +4,7 @@ import sys
 import inspect
 import meshlabxml as mlx
 import platform
+import shutil
 
 '''
 Description: A Python tool that simplify or decimate a 3D Model/Mesh (textured or not) into a lower resolution model.
