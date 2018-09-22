@@ -3,7 +3,7 @@ A Meshlab (http://www.meshlab.net/) Python 3 tool to simplify or decimate a 3D M
 
 The Python tool take a CLI arguments the original mesh, Decimated mesh, target resolution in number of faces and Whether the 3D model is textured or not.
 
-The tool also detects the Operating System (OS) you are using and then sets the PATH accordingly  (at least the default places where Meshlabserver normally resides on MS Windows, Mac OS and Linux (like Fedora 27) (Side Note: Meshlabserver is installed with Meshlab itself). In case you are using another Operating System, please change accordingly. The tool do not decimate above the original resolution.
+The tool also detects the Operating System (OS) you are using and then sets the PATH accordingly  (at least the default places where Meshlabserver normally resides on MS Windows, Mac OS and Linux (like Fedora 27) (Side Note: Meshlabserver is installed with Meshlab itself). In case you are using another Operating System, please change accordingly. The tool do not decimate above the original resolution. The tool creates a folder (named as the target resolution) for each resolution and copy all the textures of original model to it.
 
 Two versions for bulk decimations are included: one with a threading mechanism and another without threading. With threading, the duration of decimation is considerably reduced, this might be an important consideration for you for the case when you need to generate a lot of lower resolutions' models in bulk and in tandem.
 
