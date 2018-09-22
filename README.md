@@ -12,6 +12,9 @@ This tool and [BlenderPythonDecimator](https://github.com/HusseinBakri/BlenderPy
 # Requirements
 Installing Meshlab on the Operating System + Installing a Python3 Package called meshlabxml by per example 'sudo pip3 install meshlabxml' or from MeshlabXML repo.
 
+As a better approach, always when it comes to Python and its modules, it is advisable to create a Python virtual environment for your application and install through pip any module required in that particular virtual environment. From my experience, this gives no headache!
+
+
 # Usage           
 python3 simplify.py Original_Mesh_NameOrPath Output_Mesh_NameOrPath Number_Of_Faces TexturesPresentFlag
 
