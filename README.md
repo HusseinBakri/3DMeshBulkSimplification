@@ -4,7 +4,11 @@ A Meshlab (http://www.meshlab.net/) Python 3 tool to simplify or decimate a 3D M
 The Python tool take a CLI arguments the original mesh, Decimated mesh, Decimated Mesh Number of Faces and Whether the 3D model is textured or not.
 
 The tool also detects the Operating system you are using and then sets the PATH accordingly  (at least the default places where Meshlabserver normally resides on Windows, Mac OS and Linux (like Fedora 27) (Side Note: Meshlabserver is installed with Meshlab itself).
-In case you are using another Operating System, please change accordingly.
+In case you are using another Operating System, please change accordingly. The tool do not decimate above original resolution.
+
+Two versions, for bulk decimations are included (one with a threading mechanism) and another without threading. With threading the imporvement in time is considerable especialy when you have to generate a lot of lower resolution.
+
+This tool and [BlenderPythonDecimator](https://github.com/HusseinBakri/BlenderPythonDecimator), were created to supplement the Functionality of Hannibal, an adaptive engine for Web-Based Virtual Museum [1].
 
 # Requirements
 Installing Meshlab on the Operating System + Installing a Python3 Package called meshlabxml by per example 'sudo pip3 install meshlabxml' or from MeshlabXML repo.
@@ -48,3 +52,6 @@ see this for more info: https://sourceforge.net/p/meshlab/discussion/499532/thre
 
 # License
 This program is licensed under GNU GPL v3 License - you are free to distribute, change, enhance and include any of the code of this application in your tools. I only expect adequate attribution of this work. The attribution should include the title of the program, the author and the site or the document where the program is taken from.
+
+# References
+[1] Bakri, Hussein, Alan Miller, and Iain Oliver. "Fidelity Perception of 3D Models on the Web." International Conference on Immersive Learning. Springer, Cham, 2018.
