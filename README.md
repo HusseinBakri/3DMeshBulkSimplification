@@ -1,12 +1,11 @@
 # Description
 A Meshlab (http://www.meshlab.net/) Python 3 tool to simplify or decimate a 3D Model/Mesh  (With and Without Textures) into a lower resolution mesh taking a specific Number of Faces using the MeshlabXML Library (https://github.com/3DLIRIOUS/MeshLabXML).
 
-The Python tool take a CLI arguments the original mesh, Decimated mesh, Decimated Mesh Number of Faces and Whether the 3D model is textured or not.
+The Python tool take a CLI arguments the original mesh, Decimated mesh, target resolution in number of faces and Whether the 3D model is textured or not.
 
-The tool also detects the Operating system you are using and then sets the PATH accordingly  (at least the default places where Meshlabserver normally resides on Windows, Mac OS and Linux (like Fedora 27) (Side Note: Meshlabserver is installed with Meshlab itself).
-In case you are using another Operating System, please change accordingly. The tool do not decimate above original resolution.
+The tool also detects the Operating System (OS) you are using and then sets the PATH accordingly  (at least the default places where Meshlabserver normally resides on MS Windows, Mac OS and Linux (like Fedora 27) (Side Note: Meshlabserver is installed with Meshlab itself). In case you are using another Operating System, please change accordingly. The tool do not decimate above the original resolution.
 
-Two versions, for bulk decimations are included one with a threading mechanism and another without threading. With threading, the imporvement in time is considerable especialy when you have to generate a lot of lower resolutions models.
+Two versions for bulk decimations are included: one with a threading mechanism and another without threading. With threading, the duration of decimation is considerably reduced, this might be an important consideration for you for the case when you need to generate a lot of lower resolutions' models in bulk and in tandem.
 
 This tool and [BlenderPythonDecimator](https://github.com/HusseinBakri/BlenderPythonDecimator) allow you to decimate a 3D mesh into lower resolutions.
 
@@ -26,6 +25,8 @@ TexturesPresentFlag: True or False. If 3D mesh is tectured you have to use True.
 
 Supported Meshes Types are the ones that are normally supported by Meshlab (.obj, ply etc...)
 Meshlab unfortunately till now, does not support .gltf files yet. This might change in the future.
+
+[NB] Please check the other python scripts (simplifybulknothreading.py and simplifybulkthreaded.py) for the right way to use them.
 
 # Example 
 python3 simplify.py Hat.obj Hat_Simplified.obj 150000 True
