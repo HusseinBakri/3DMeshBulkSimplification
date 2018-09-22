@@ -15,6 +15,7 @@ Description: It takes via normal script "simplifybulk.py" 17 minutes to Decimate
 			 so the time it takes now is only around 5 minutes (a considerable improvement).
 Usage: python3 simplifybulkthreaded.py
 You can of course include functionality to take arguments from command line/terminal like I did in simplify.py
+DO NOT FORGET to change: Decimations_List, originalMesh (name of original mesh), SimplifiedMesh & Textures to what suits you.
 Enjoy!
 '''
 
