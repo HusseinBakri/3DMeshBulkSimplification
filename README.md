@@ -55,4 +55,4 @@ see this for more info: https://sourceforge.net/p/meshlab/discussion/499532/thre
 2) Better: I created another Python Tool that do the decimation with impressive results using Blender Python API. It works as a complete headless solution like a charm! Have a look at https://github.com/HusseinBakri/BlenderPythonDecimator.
 
 # License
-This program is licensed under GNU GPL v3 License - you are free to distribute, change, enhance and include any of the code of this application in your tools. I only expect adequate attribution of this work. The attribution should include the title of the program, the author and the site or the document where the program is taken from.
+This program is licensed under MIT License - you are free to distribute, change, enhance and include any of the code of this application in your tools. I only expect adequate attribution and citation of this work. The attribution should include the title of the program, the author and the site or the document where the program is taken from.
