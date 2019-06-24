@@ -34,6 +34,21 @@ Meshlab unfortunately till now, does not support .gltf files yet. This might cha
 # Example 
 python3 simplify.py Hat.obj Hat_Simplified.obj 150000 True
 
+# Meshlab GUI similarity VS My Python code
+The simplification done here mimick "exactly" what you can do in the GUI filter of Meshlab. We are using the Quadric Edge Collapse algorithm preserving UV parametrisations. Meshlab implements the algorithm of Garland and Heckbert (1997, 1998) [1,2] with minor alterations (have a look at the source code of Meshlab to learn more how it is implemented - good exercice for the students of Computer Graphics course out there!).
+
+![alt text](http://url/to/img.png)
+
+The parameters in the figure above (from my experience) produce the most optimum decimated i.e. simplified model. You can of course play around with these parameters and see what works best for you. The following Python code in my scripts is responsible for setting these parameters as required.
+
+```
+mlx.remesh.simplify(simplified_meshScript, texture=TexturesFlag, faces=Num_Of_Faces,
+                    target_perc=0.0, quality_thr=1.0, preserve_boundary=True,
+                    boundary_weight=1.0, preserve_normal=True,
+                    optimal_placement=True, planar_quadric=True,
+                    selected=False, extra_tex_coord_weight=1.0)
+```
+
 
 # Annoying Problem of cannot connect to X server in headless Linux server
 Now this tools is tested on Mac OS High Sierra, Linux Fedora 27 and MS Windows 10. Works fine. Please contact me if you find bugs.
