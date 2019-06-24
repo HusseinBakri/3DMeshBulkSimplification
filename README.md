@@ -35,7 +35,7 @@ Meshlab unfortunately till now, does not support .gltf files yet. This might cha
 python3 simplify.py Hat.obj Hat_Simplified.obj 150000 True
 
 # Meshlab GUI similarity VS My Python code
-The simplification done here mimick "exactly" what you can do in the GUI filter of Meshlab. We are using the Quadric Edge Collapse algorithm preserving UV parametrisations. Meshlab implements the algorithm of Garland and Heckbert (1997, 1998) [1,2] with minor alterations (have a look at the source code of Meshlab to learn more how it is implemented - good exercice for the students of Computer Graphics course out there!).
+The simplification done here mimick "exactly" what you can do in the GUI filter of Meshlab. We are using the Quadric Edge Collapse algorithm preserving UV parametrisations. Meshlab implements the algorithm of Garland and Heckbert (1997, 1998) [1,2] with minor alterations (have a look at the source code of Meshlab to learn more how it is implemented - good exercice for the students of Computer Graphics courses out there!).
 
 ![alt text](https://raw.githubusercontent.com/HusseinBakri/3DMeshBulkSimplification/master/QuadricDecimation1.PNG)
 
