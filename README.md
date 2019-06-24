@@ -69,5 +69,9 @@ xvfb-run python3 simplify.py Hat.obj Hat_Simplified.obj 150000 True
 see this for more info: https://sourceforge.net/p/meshlab/discussion/499532/thread/6c3eebe2/
 2) Better: I created another Python Tool that do the decimation with impressive results using Blender Python API. It works as a complete headless solution like a charm! Have a look at https://github.com/HusseinBakri/BlenderPythonDecimator.
 
+# References
+[1] Garland, Michael, and Paul S. Heckbert. "Surface simplification using quadric error metrics." Proceedings of the 24th annual conference on Computer graphics and interactive techniques. ACM Press/Addison-Wesley Publishing Co., 1997.
+[2] Garland, Michael, and Paul S. Heckbert. "Simplifying surfaces with color and texture using quadric error metrics." Proceedings Visualization'98 (Cat. No. 98CB36276). IEEE, 1998.
+
 # License
 This program is licensed under MIT License - you are free to distribute, change, enhance and include any of the code of this application in your tools. I only expect adequate attribution and citation of this work. The attribution should include the title of the program, the author and the site or the document where the program is taken from.
