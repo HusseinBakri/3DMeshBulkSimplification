@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+# Author: Hussein Bakri
+
 import os
 import sys
 import inspect
