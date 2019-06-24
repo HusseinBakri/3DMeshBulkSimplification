@@ -71,6 +71,7 @@ see this for more info: https://sourceforge.net/p/meshlab/discussion/499532/thre
 
 # References
 [1] Garland, Michael, and Paul S. Heckbert. "Surface simplification using quadric error metrics." Proceedings of the 24th annual conference on Computer graphics and interactive techniques. ACM Press/Addison-Wesley Publishing Co., 1997.
+
 [2] Garland, Michael, and Paul S. Heckbert. "Simplifying surfaces with color and texture using quadric error metrics." Proceedings Visualization'98 (Cat. No. 98CB36276). IEEE, 1998.
 
 # License
