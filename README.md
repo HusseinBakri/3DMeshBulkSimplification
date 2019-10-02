@@ -51,7 +51,7 @@ mlx.remesh.simplify(simplified_meshScript, texture=TexturesFlag, faces=Num_Of_Fa
 
 
 # Annoying Problem of cannot connect to X server in headless Linux server
-Now this tools is tested on Mac OS High Sierra, Linux Fedora 27 and MS Windows 10. Works fine. Please contact me if you find bugs.
+Now this tool is tested on Mac OS High Sierra, Linux Fedora 27 and MS Windows 10. Works fine. Please contact me if you find bugs.
 The problem you might encounter happens when you want to use Meshlab Server on a Linux/Unix Headless (meaning no GUI no X Server).
 
 You might get the following error: Problem: meshlabserver: cannot connect to X server
