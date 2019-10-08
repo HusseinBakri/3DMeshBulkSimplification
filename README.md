@@ -1,4 +1,6 @@
 # Description
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3476897.svg)](https://doi.org/10.5281/zenodo.3476897)
+
 A Meshlab (http://www.meshlab.net/) Python 3 tool to simplify or decimate a 3D Model/Mesh  (With and Without Textures) into a lower resolution mesh taking a specific Number of Faces using the MeshlabXML Library (https://github.com/3DLIRIOUS/MeshLabXML).
 
 The Python tool takes CLI arguments such as the original mesh name, the decimated mesh name, the target resolution in number of faces and whether the 3D model is textured or not.
