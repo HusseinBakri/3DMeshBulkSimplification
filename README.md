@@ -1,18 +1,18 @@
 # Description
 A Meshlab (http://www.meshlab.net/) Python 3 tool to simplify or decimate a 3D Model/Mesh  (With and Without Textures) into a lower resolution mesh taking a specific Number of Faces using the MeshlabXML Library (https://github.com/3DLIRIOUS/MeshLabXML).
 
-The Python tool take a CLI arguments the original mesh, Decimated mesh, target resolution in number of faces and Whether the 3D model is textured or not.
+The Python tool takes CLI arguments such as the original mesh name, the decimated mesh name, the target resolution in number of faces and whether the 3D model is textured or not.
 
-The tool also detects the Operating System (OS) you are using and then sets the PATH accordingly  (at least the default places where Meshlabserver normally resides on MS Windows, Mac OS and Linux (like Fedora 27) (Side Note: Meshlabserver is installed with Meshlab itself). In case you are using another Operating System, please change accordingly. The tool do not decimate above the original resolution. The tool creates a folder (named as the target resolution) for each resolution and copy all the textures of original model to it.
+The tool also detects the Operating System (OS) you are using and then sets the PATH accordingly (at least the default places where Meshlabserver normally resides on MS Windows, Mac OS and Linux (like Fedora 27) (Side Note: Meshlabserver is installed with Meshlab itself). In case you are using another OS, please change accordingly. The tool does not decimate above the original resolution. The tool creates a folder (named as the target resolution) for each resolution and copy all the textures of original model to it.
 
 Two versions for bulk decimations are included: one with a threading mechanism and another without threading. With threading, the duration of decimation is considerably reduced, this might be an important consideration for you for the case when you need to generate a lot of lower resolutions' models in bulk and in tandem.
 
 This tool and [BlenderPythonDecimator](https://github.com/HusseinBakri/BlenderPythonDecimator) allow you to decimate a 3D mesh into lower resolutions.
 
 # Requirements
-Installing Meshlab on the Operating System + Installing a Python3 Package called meshlabxml by per example 'sudo pip3 install meshlabxml' or from MeshlabXML repo.
+Installing Meshlab on the Operating System + installing a Python3 package called meshlabxml by per example 'sudo pip3 install meshlabxml' or from MeshlabXML repo.
 
-As a better approach, always when it comes to Python and its modules, it is advisable to create a Python virtual environment for your application and install through pip any module required in that particular virtual environment. From my experience, this gives no headache!
+It is advisable when it comes to installing Python and its modules, to create a Python virtual environment for your application and then install through pip any module required in that particular virtual environment. From my experience, this gives no headache!
 
 
 # Usage           
@@ -35,11 +35,11 @@ Meshlab unfortunately till now, does not support .gltf files yet. This might cha
 python3 simplify.py Hat.obj Hat_Simplified.obj 150000 True
 
 # Meshlab GUI similarity VS My Python code
-The simplification done here mimic "exactly" what you can do in the GUI filter of Meshlab. We are using the Quadric Edge Collapse algorithm preserving UV parametrisations. Meshlab implements the algorithm of Garland and Heckbert (1997, 1998) [1,2] with minor alterations (have a look at the source code of Meshlab to learn more on how it is implemented - A good exercice for the students of Computer Graphics courses out there!!!).
+The simplification done here mimic "exactly" what you can do in the GUI filter of the Meshlab application. We are using the Quadric Edge Collapse algorithm preserving UV parametrisations. Meshlab implements the algorithm of Garland and Heckbert (1997, 1998) [1,2] with minor alterations (have a look at the source code of Meshlab to learn more on how it is implemented - A good exercice for the students of Computer Graphics courses out there!!!).
 
 ![alt text](https://raw.githubusercontent.com/HusseinBakri/3DMeshBulkSimplification/master/QuadricDecimation1.PNG)
 
-The parameters in the figure above  produce the most optimum decimated i.e. simplified model (from my experience). I have used these Python scripts as part of many applications. You can of course play around with these parameters and see what works best for you. The following Python code in my scripts is responsible for setting these parameters as required.
+The parameters in the figure above  produce the most optimum decimated i.e. simplified model (from my experience). I have used these Python scripts as part of many applications. You can of course play around with these parameters and see what works best for you. The following Python code in the tool is responsible for setting these parameters as required.
 
 ```
 mlx.remesh.simplify(simplified_meshScript, texture=TexturesFlag, faces=Num_Of_Faces,
@@ -56,7 +56,7 @@ The problem you might encounter happens when you want to use Meshlab Server on a
 
 You might get the following error: Problem: meshlabserver: cannot connect to X server
 
-That problem caused me a lot of headache when I was using this solution to bulk decimate models on Ubuntu Server 16.04. First you need to install xserver (solution below - similar technique for other Linux distros):
+That problem caused me a lot of headache when I was using this solution to bulk decimate models in a bigger system that I have created  on Ubuntu Server 16.04. First you need to install xserver (solution below - similar technique for other Linux distros):
 ```
 sudo apt-get install xserver-xorg xserver-xorg-core x11-apps x11-xserver-utils
 Xvfb :99 &
@@ -75,4 +75,4 @@ see this for more info: https://sourceforge.net/p/meshlab/discussion/499532/thre
 [2] Garland, Michael, and Paul S. Heckbert. "Simplifying surfaces with color and texture using quadric error metrics." Proceedings Visualization'98 (Cat. No. 98CB36276). IEEE, 1998.
 
 # License
-This program is licensed under MIT License - you are free to distribute, change, enhance and include any of the code of this application in your tools. I only expect adequate attribution and citation of this work. The attribution should include the title of the program, the author and the site or the document where the program is taken from.
+This program is licensed under MIT License - you are free to distribute, change, enhance and include any of the code of this application in your tools. I only expect adequate attribution and citation of this work. The attribution should include the title of the program, the author (me) and the site or the document where the program is taken from.
